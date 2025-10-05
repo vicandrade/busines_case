@@ -138,7 +138,7 @@ def cabinet_allocation_page():
     
     # Ler aqruivos
     arquivos = {
-        'stations': '../data/processed/stations_processed.parquet',
+        'stations': 'data/processed/stations_processed.parquet',
         'allocation_md': 'allocation.md',
     }
 

@@ -14,12 +14,12 @@ def analytics_page():
 
     # Ler aqruivos
     arquivos = {
-        'swaps': '../data/processed/merged_data.parquet',
-        'stations': '../data/processed/stations_processed.parquet',
-        'preds_cabinets_hourly': '../data/model/pred_cabinets_hourly.parquet',
-        'preds_cabinets_daily': '../data/model/pred_cabinets_daily.parquet',
-        'preds_stations_hourly': '../data/model/pred_stations_hourly.parquet',
-        'preds_stations_daily': '../data/model/pred_stations_daily.parquet',
+        'swaps': 'data/processed/merged_data.parquet',
+        'stations': 'data/processed/stations_processed.parquet',
+        'preds_cabinets_hourly': 'data/model/pred_cabinets_hourly.parquet',
+        'preds_cabinets_daily': 'data/model/pred_cabinets_daily.parquet',
+        'preds_stations_hourly': 'data/model/pred_stations_hourly.parquet',
+        'preds_stations_daily': 'data/model/pred_stations_daily.parquet',
     }
 
     for key, path in arquivos.items():
