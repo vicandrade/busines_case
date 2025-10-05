@@ -136,12 +136,10 @@ def cabinet_allocation_page():
     
     st.header('Alocação Inteligente de Cabinets', divider='blue')
     
-    # Caminhos relativos a partir deste arquivo
-    BASE_DIR = os.path.dirname(__file__)
-    
+    # Arquivos
     arquivos = {
-        'stations': os.path.join(BASE_DIR, 'data', 'processed', 'stations_processed.parquet'),
-        'allocation_md': os.path.join(BASE_DIR, 'data', 'allocation.md'),
+        'stations': os.path.join('data', 'processed', 'stations_processed.parquet'),
+        'allocation_md': os.path.join('data', 'allocation.md'),
     }
     
     # Carregar Parquet normalmente
