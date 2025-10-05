@@ -136,13 +136,15 @@ def cabinet_allocation_page():
     
     st.header('Alocação Inteligente de Cabinets', divider='blue')
     
-    # Ler aqruivos
+    # Caminhos relativos a partir deste arquivo
+    BASE_DIR = os.path.dirname(__file__)
+    
     arquivos = {
-        'stations': 'data/processed/stations_processed.parquet',
-        'allocation_md': 'allocation.md',
+        'stations': os.path.join(BASE_DIR, 'data', 'processed', 'stations_processed.parquet'),
+        'allocation_md': os.path.join(BASE_DIR, 'data', 'allocation.md'),
     }
-
-    # Carregar CSV normalmente
+    
+    # Carregar Parquet normalmente
     if 'stations' not in st.session_state:
         st.session_state['stations'] = pd.read_parquet(arquivos['stations'], engine='pyarrow')
     

@@ -4,6 +4,7 @@ from media import render_img_html
 import plotly.express as px
 import plotly.graph_objects as go
 from sktime.performance_metrics.forecasting import mean_absolute_error
+import os
 
 def analytics_page():
     cols = st.columns([1, 1, 15])
@@ -14,12 +15,12 @@ def analytics_page():
 
     # Ler aqruivos
     arquivos = {
-        'swaps': 'data/processed/merged_data.parquet',
-        'stations': 'data/processed/stations_processed.parquet',
-        'preds_cabinets_hourly': 'data/model/pred_cabinets_hourly.parquet',
-        'preds_cabinets_daily': 'data/model/pred_cabinets_daily.parquet',
-        'preds_stations_hourly': 'data/model/pred_stations_hourly.parquet',
-        'preds_stations_daily': 'data/model/pred_stations_daily.parquet',
+        'swaps': os.path.join(os.path.dirname(__file__), 'data', 'processed', 'swaps_processed.parquet'),
+        'stations': os.path.join(os.path.dirname(__file__), 'data', 'processed', 'stations_processed.parquet'),
+        'preds_cabinets_hourly': os.path.join(os.path.dirname(__file__), 'data', 'model', 'pred_cabinets_hourly.parquet'),
+        'preds_cabinets_daily': os.path.join(os.path.dirname(__file__), 'data', 'model', 'pred_cabinets_daily.parquet'),
+        'preds_stations_hourly': os.path.join(os.path.dirname(__file__), 'data', 'model', 'pred_stations_hourly.parquet'),
+        'preds_stations_daily': os.path.join(os.path.dirname(__file__), 'data', 'model', 'pred_stations_daily.parquet'),
     }
 
     for key, path in arquivos.items():
