@@ -138,8 +138,8 @@ def cabinet_allocation_page():
     
     # Arquivos
     arquivos = {
-        'stations': os.path.join('data', 'processed', 'stations_processed.parquet'),
-        'allocation_md': os.path.join('data', 'allocation.md'),
+        'stations': os.path.join(os.path.dirname(__file__), 'data', 'processed', 'stations_processed.parquet'),
+        'allocation_md': os.path.join(os.path.dirname(__file__), 'data', 'allocation.md'),
     }
     
     # Carregar Parquet normalmente
