@@ -90,4 +90,5 @@ O pipeline de alocação prioriza aumento de swaps onde há alta demanda ou subu
 ## Autor
 
 Vic Martins - Cientista de Dados
+
 Consultoria em ciência de dados.
