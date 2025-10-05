@@ -40,7 +40,7 @@ def main():
 
     with st.sidebar:
         col1, col2, col3 = st.columns([1, 3, 1])
-        img_path = 'imgs/client_logo.png'
+        img_path = os.path.join(os.path.dirname(__file__), '..', 'imgs', 'client_logo.png')
         render_img_html(img_path, 60)
         st.write('')
 
