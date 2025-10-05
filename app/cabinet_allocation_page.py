@@ -2,6 +2,7 @@ import pandas as pd
 import streamlit as st
 from media import render_img_html
 import numpy as np
+import os
 
 # Função auxiliar para normalizar valores
 def normalize(series):
